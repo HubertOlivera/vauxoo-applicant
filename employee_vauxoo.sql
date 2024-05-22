@@ -43,4 +43,3 @@ INSERT INTO employee (first_name, last_name, department_id, hobby_id) VALUES
 ('Jane', 'Smith', 2, 2),
 ('Alice', 'Johnson', 3, 3),
 ('Bob', 'Brown', 4, 1);
-
