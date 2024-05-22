@@ -43,3 +43,32 @@ INSERT INTO employee (first_name, last_name, department_id, hobby_id) VALUES
 ('Jane', 'Smith', 2, 2),
 ('Alice', 'Johnson', 3, 3),
 ('Bob', 'Brown', 4, 1);
+
+CREATE TABLE employee_hobby_employee (
+    id_employee INTEGER REFERENCES employee (id), 
+    id_hobby INTEGER REFERENCES employee_hobby (id) ON DELETE RESTRICT
+);
+
+INSERT INTO employee_hobby VALUES
+(1, 'Escuchar musica', 'Escuchar musica por spotify');
+INSERT INTO employee_hobby VALUES
+(2, 'Jugar futboll', 'Jugar futboll en el estadio nacional');
+INSERT INTO employee_hobby VALUES
+(3, 'Dibujar', 'Dibujar con crayones y otros elementos');
+
+INSERT INTO employee_hobby_employee VALUES
+(1, 1);
+INSERT INTO employee_hobby_employee VALUES
+(1, 3);
+INSERT INTO employee_hobby_employee VALUES
+(2, 2);
+INSERT INTO employee_hobby_employee VALUES
+(2, 3);
+INSERT INTO employee_hobby_employee VALUES
+(3, 1);
+INSERT INTO employee_hobby_employee VALUES
+(3, 2);
+INSERT INTO employee_hobby_employee VALUES
+(4, 1);
+INSERT INTO employee_hobby_employee VALUES
+(4, 2);
